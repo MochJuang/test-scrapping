@@ -20,6 +20,8 @@ exports.execute = async function() {
                 row.find('img').each( (i, image) => {
                     if ($(image).attr('src') != undefined) {
                         images.push($(image).attr('src'))
+                    }else {
+                        images.push($(image).data('src'))
                     }
                 })
                 let price = row.find('.PriceSection-FirstPrice').text().trim().toUpperCase()
