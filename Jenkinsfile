@@ -6,6 +6,8 @@ pipeline {
             steps {
                 echo "Hellow world 1"
                 echo "Hellow world 2"
+                git version
+                node --version
             }
         }
         stage("test") {
