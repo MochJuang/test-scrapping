@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                go version
+                echo "build 1"
             }
         }
         stage("test") {
