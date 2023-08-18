@@ -14,4 +14,13 @@ pipeline {
             }
         }
     }
+
+    post {
+        failur {
+            echo "adaa yang error gaess coba cek"
+        }
+        success {
+            echo "success nih ci/cd nya"
+        }
+    }
 }
