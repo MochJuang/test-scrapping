@@ -4,8 +4,6 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                echo "Hellow world 1"
-                echo "Hellow world 2"
                 go version
             }
         }
