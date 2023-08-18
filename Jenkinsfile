@@ -7,7 +7,6 @@ pipeline {
                 echo "Hellow world 1"
                 echo "Hellow world 2"
                 go version
-                node -v
             }
         }
         stage("test") {
