@@ -16,7 +16,7 @@ pipeline {
     }
 
     post {
-        failur {
+        failure {
             echo "adaa yang error gaess coba cek"
         }
         success {
