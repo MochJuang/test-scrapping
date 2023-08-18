@@ -5,6 +5,11 @@ pipeline {
         stage("build") {
             steps {
                 echo "build 1"
+                script {
+                    for (int i = 0; i < 5; i++) {
+                        echo "script ke-"+i
+                    }
+                }
             }
         }
         stage("test") {
