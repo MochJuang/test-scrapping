@@ -6,6 +6,9 @@ pipeline {
         JUANG_TEST = credentials("juang-test")
     }
 
+    parameters {
+        choice(name : "stage", choices : ["dev", "stage", "prod"], description: "Choose stage who will deploy")
+    }
     
     stages {
         stage("build") {
