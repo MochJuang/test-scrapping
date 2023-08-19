@@ -45,11 +45,6 @@ pipeline {
                     }
                 }
             }
-            steps {
-                echo "testing 1"
-                echo "testing 2"
-                echo "build to stage ${params.stage}"
-            }
         }
     }
 
