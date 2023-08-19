@@ -33,17 +33,11 @@ pipeline {
             }
         }
         stage("test") {
-            stages {
-                stage("test-a") {
-                    steps {
-                        echo "test a"
-                    }
-                }
-                stage("test-b") {
-                    steps {
-                        echo "test b"
-                    }
-                }
+            steps {
+                echo "testing 1"
+                echo "testing 2"
+                echo "nambah trigger hook"
+                echo "build to stage ${params.stage}"
             }
         }
     }
