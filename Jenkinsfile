@@ -15,9 +15,9 @@ pipeline {
                         echo "script ke-"+i
                     }
                 }
-                echo "Slack Credential : ${SLACK_CREDENTIAL}"
-                echo "Juang Username : ${JUANG_TEST_USR}"
-                echo "Juang Password : ${JUANG_TEST_PSW}"
+                echo 'Slack Credential : $SLACK_CREDENTIAL'
+                echo 'Juang Username : $JUANG_TEST_USR'
+                echo 'Juang Password : $JUANG_TEST_PSW'
             }
         }
         stage("test") {
