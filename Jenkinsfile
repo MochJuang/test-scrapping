@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         SLACK_CREDENTIAL = credentials("slack-credential")
+        JUANG_TEST = credentials("juang-test")
     }
     
     stages {
@@ -15,6 +16,8 @@ pipeline {
                     }
                 }
                 echo "Slack Credential : ${SLACK_CREDENTIAL}"
+                echo "Juang Username : ${JUANG_TEST_USR}"
+                echo "Juang Password : ${JUANG_TEST_PSW}"
             }
         }
         stage("test") {
