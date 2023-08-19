@@ -19,6 +19,7 @@ pipeline {
                         echo "script ke-"+i
                     }
                 }
+                echo "build to stage ${params.stage}"
                 echo 'Slack Credential : $SLACK_CREDENTIAL'
                 echo 'Juang Username : $JUANG_TEST_USR'
                 echo 'Juang Password : $JUANG_TEST_PSW'
