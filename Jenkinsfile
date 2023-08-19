@@ -37,6 +37,7 @@ pipeline {
                 echo "testing 1"
                 echo "testing 2"
                 echo "nambah trigger hook"
+                echo "nambah trigger hook 2"
                 echo "build to stage ${params.stage}"
             }
         }
