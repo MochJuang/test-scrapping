@@ -6,17 +6,17 @@ pipeline {
         JUANG_TEST = credentials("juang-test")
     }
 
-    input {
-        message "can we deploy"
-        ok "Yes, of course"
-        submitter "mochjuangpp"
-        parameters {
-            choice(name : "stage", choices : ["dev", "stage", "prod"], description: "Choose stage who will deploy")
-        }
-    }
     
     stages {
         stage("build") {
+            input {
+                message "can we deploy"
+                ok "Yes, of course"
+                submitter "mochjuangpp"
+                parameters {
+                    choice(name : "stage", choices : ["dev", "stage", "prod"], description: "Choose stage who will deploy")
+                }
+            }
             steps {
                 echo "build 1"
                 script {
