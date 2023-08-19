@@ -6,8 +6,13 @@ pipeline {
         JUANG_TEST = credentials("juang-test")
     }
 
-    parameters {
-        choice(name : "stage", choices : ["dev", "stage", "prod"], description: "Choose stage who will deploy")
+    input {
+        message "can we deploy"
+        ok "Yes, of course"
+        submitter "mochjuangpp"
+        parameters {
+            choice(name : "stage", choices : ["dev", "stage", "prod"], description: "Choose stage who will deploy")
+        }
     }
     
     stages {
@@ -19,7 +24,6 @@ pipeline {
                         echo "script ke-"+i
                     }
                 }
-                echo "build to stage ${params.stage}"
                 echo 'Slack Credential : $SLACK_CREDENTIAL'
                 echo 'Juang Username : $JUANG_TEST_USR'
                 echo 'Juang Password : $JUANG_TEST_PSW'
@@ -29,6 +33,7 @@ pipeline {
             steps {
                 echo "testing 1"
                 echo "testing 2"
+                echo "build to stage ${params.stage}"
             }
         }
     }
