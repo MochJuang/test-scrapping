@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+    environment {
+        SLACK_CREDENTIAL = credentials("slack-credential")
+    }
     
     stages {
         stage("build") {
@@ -10,6 +14,7 @@ pipeline {
                         echo "script ke-"+i
                     }
                 }
+                echo "Slack Credential : ${SLACK_CREDENTIAL}"
             }
         }
         stage("test") {
