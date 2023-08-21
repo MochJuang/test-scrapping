@@ -12,14 +12,6 @@ pipeline {
     
     stages {
         stage("build") {
-            input {
-                message "can we deploy"
-                ok "Yes, of course"
-                submitter "mochjuangpp"
-                parameters {
-                    choice(name : "stage", choices : ["dev", "stage", "prod"], description: "Choose stage who will deploy")
-                }
-            }
             steps {
                 echo "build 1"
                 script {
@@ -38,7 +30,7 @@ pipeline {
                 echo "testing 2"
                 echo "nambah trigger hook"
                 echo "nambah trigger hook 2"
-                echo "build to stage ${params.stage}"
+                sh 'go version'
             }
         }
     }
